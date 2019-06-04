@@ -71,7 +71,7 @@ The code was modified to expand the solar options to include orientation of the 
 import pickle
 import numpy as np
 import pandas as pd
-import defining_classes
+from . import defining_classes
 
 #%%
 ''' These will indicate columns in the solarProduction array.

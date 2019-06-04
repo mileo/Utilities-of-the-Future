@@ -22,8 +22,8 @@ import numpy as np
 import xlsxwriter
 import time
 import pickle
-import solar_pv_init # To set up the city buildings types
-import solar_pv_static as solar_pv
+from Cambridge import solar_pv_init # To set up the city buildings types
+from Cambridge import solar_pv_static as solar_pv
 runData = pickle.load(open('pickles/buildingData.p','rb'))
 Run=0
 for current_price in electricity_price_list:
