@@ -8,6 +8,8 @@ __pycache__/
 
 # Distribution / packaging
 .Python
+bin/
+include/
 env/
 build/
 develop-eggs/
@@ -87,3 +89,7 @@ ENV/
 
 # Rope project settings
 .ropeproject
+
+*.xls
+*.xlsx
+*.p
