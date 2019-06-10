@@ -1,5 +1,5 @@
 '''This Model is for which city? (Cambridge, MA or Lancaster,CA?)'''
-city = 'Lancaster'
+city = 'Cambridge'
 #to determine the capacity factor
 if city == 'Cambridge': cap_fac=.15 
 else: cap_fac=.20 # The city is Lancaster,CA
@@ -22,8 +22,14 @@ import numpy as np
 import xlsxwriter
 import time
 import pickle
-from Cambridge import solar_pv_init # To set up the city buildings types
-from Cambridge import solar_pv_static as solar_pv
+
+if city == 'Cambridge':
+    from Cambridge import solar_pv_init # To set up the city buildings types
+    from Cambridge import solar_pv_static as solar_pv
+else:
+    from Lancaster import solar_pv_init # To set up the city buildings types
+    from Lancaster import solar_pv_static as solar_pv
+
 runData = pickle.load(open('pickles/buildingData.p','rb'))
 Run=0
 for current_price in electricity_price_list:
